@@ -4,4 +4,16 @@
 data
 logs
 target
-
+.settings
+.classpath
+.project
+.cache
+.node_modules/
+out/
+build.log
+.swp
+rebel.xml
+node_modules
+db/
+*.eml
+*.userlibraries
