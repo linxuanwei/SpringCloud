@@ -8,6 +8,8 @@ services:
     environment:
       - PREFER_HOST_MODE=hostname
       - MODE=standalone
+      - JVM_XMS=1024m 
+      - JVM_XMX=2048m
     volumes:
       - ../data/nacos-server/logs/:/home/nacos/logs
     ports:

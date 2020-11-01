@@ -3,13 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.springboot.cloud</groupId>
     <artifactId>authorization-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>authorization-server</name>
-    <description>Demo Oauth2 project for Spring Cloud Oauth2 Authorization Server</description>
+    <description>授权服务器</description>
 
     <parent>
         <groupId>com.springboot.cloud</groupId>
@@ -22,6 +21,12 @@
             <groupId>com.springboot.cloud</groupId>
             <artifactId>web</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>mybatis</artifactId>
+                    <groupId>org.mybatis</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!--oauth2认证-->
         <dependency>
@@ -30,9 +35,8 @@
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.10.0.pr1</version>
-            <scope>compile</scope>
+            <artifactId>jackson-core</artifactId>
+            <version>2.10.1</version>
         </dependency>
     </dependencies>
 

@@ -2,7 +2,8 @@
 
 for file in $(find /sql -name "*.sql" -exec ls {} \;| grep -v postgres | sort | tr ' ' '|' | tr '\n' ' ')
 do
-    file=$(echo ${file} | tr '|' ' ')
+    file=$(echo "${file}" | tr '|' ' ')
+    # shellcheck disable=SC2059
     printf "Applying update ${file}\n"
-    mysql -uroot -p$MYSQL_ROOT_PASSWORD -h mysql < ${file}
+    mysql -uroot -p"$MYSQL_ROOT_PASSWORD" -h mysql < "${file}"
 done

@@ -3,13 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.springboot.cloud</groupId>
     <artifactId>authentication-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>authentication-server</name>
-    <description>Demo Oauth2 project for Spring Cloud Oauth2 Authentication Server</description>
+    <description>鉴权服务器</description>
 
     <parent>
         <groupId>com.springboot.cloud</groupId>
